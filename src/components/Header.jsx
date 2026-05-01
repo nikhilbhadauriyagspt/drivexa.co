@@ -13,6 +13,23 @@ import {
   FaKeyboard,
   FaPrint,
 } from "react-icons/fa";
+import {
+  Download,
+  RefreshCcw,
+  Monitor,
+  XCircle,
+  Printer,
+  Volume2,
+  Wifi,
+  Bluetooth,
+  Usb,
+  MonitorSmartphone,
+  Video,
+  Scan,
+  Cpu,
+  ShieldAlert,
+  Zap
+} from "lucide-react";
 import { servicesData } from "../data/services";
 
 const Header = () => {
@@ -84,10 +101,27 @@ const Header = () => {
     },
   ];
 
+  const commonIssues = [
+    { title: "Driver Not Installed", icon: <Download size={14} />, slug: "fix-driver-not-installed" },
+    { title: "Outdated Drivers", icon: <RefreshCcw size={14} />, slug: "fix-driver-update-failed" },
+    { title: "Device Not Detected", icon: <Monitor size={14} />, slug: "fix-device-not-detected" },
+    { title: "Driver Update Failed", icon: <XCircle size={14} />, slug: "fix-driver-update-failed" },
+    { title: "Printer Driver Issues", icon: <Printer size={14} />, slug: "fix-printer-driver-issues" },
+    { title: "Audio Not Working", icon: <Volume2 size={14} />, slug: "fix-audio-driver-problems" },
+    { title: "Network / WiFi Issues", icon: <Wifi size={14} />, slug: "fix-wifi-network-issues" },
+    { title: "Bluetooth Problems", icon: <Bluetooth size={14} />, slug: "fix-bluetooth-driver-problems" },
+    { title: "USB Not Recognized", icon: <Usb size={14} />, slug: "fix-usb-driver-issues" },
+    { title: "Graphics / Display Issues", icon: <MonitorSmartphone size={14} />, slug: "fix-graphics-driver-issues" },
+    { title: "Webcam Offline", icon: <Video size={14} />, slug: "fix-webcam-driver-issues" },
+    { title: "Scanner Errors", icon: <Scan size={14} />, slug: "fix-scanner-driver-problems" },
+    { title: "Chipset Logic", icon: <Cpu size={14} />, slug: "update-chipset-drivers" },
+    { title: "BIOS / Firmware", icon: <ShieldAlert size={14} />, slug: "guide-bios-firmware-updates" },
+    { title: "Input Latency", icon: <Zap size={14} />, slug: "fix-input-latency-drivers" },
+  ];
+
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name: "Guides", path: "/guides" },
     { name: "FAQ", path: "/faq" },
   ];
 
@@ -111,7 +145,7 @@ const Header = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`px-4 py-2 text-[12px] font-semibold rounded-full transition-all ${location.pathname === link.path
+                className={`px-4 py-2 text-[12px] font-bold rounded-full transition-all ${location.pathname === link.path
                   ? "bg-gray-100 text-gray-900"
                   : "text-gray-500 hover:bg-gray-100 hover:text-gray-900"
                   }`}
@@ -127,7 +161,7 @@ const Header = () => {
               onMouseLeave={() => setActiveDropdown(null)}
             >
               <button
-                className={`flex items-center gap-1.5 px-4 py-2 text-[12px] font-semibold rounded-full transition-all ${activeDropdown === "topics"
+                className={`flex items-center gap-1.5 px-4 py-2 text-[12px] font-bold rounded-full transition-all ${activeDropdown === "topics"
                   ? "bg-gray-100 text-gray-900"
                   : "text-gray-500 hover:bg-gray-100 hover:text-gray-900"
                   }`}
@@ -159,6 +193,52 @@ const Header = () => {
                       </div>
                       <span className="text-[13px] font-bold text-gray-800">
                         {cat.title}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Fix Issues Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setActiveDropdown("issues")}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
+              <button
+                className={`flex items-center gap-1.5 px-4 py-2 text-[12px] font-semibold rounded-full transition-all ${activeDropdown === "issues"
+                  ? "bg-gray-100 text-gray-900"
+                  : "text-gray-500 hover:bg-gray-100 hover:text-gray-900"
+                  }`}
+              >
+                Fix Issues
+                <FaChevronDown
+                  size={8}
+                  className={`transition-transform ${activeDropdown === "issues" ? "rotate-180" : ""
+                    }`}
+                />
+              </button>
+
+              <div
+                className={`absolute top-full -left-48 w-[780px] pt-4 transition-all duration-300 ${activeDropdown === "issues"
+                  ? "opacity-100 visible translate-y-0"
+                  : "opacity-0 invisible translate-y-4"
+                  }`}
+              >
+                <div className="bg-white rounded-[28px] shadow-2xl border border-gray-100 p-6 grid grid-cols-3 gap-3">
+                  {commonIssues.map((issue) => (
+                    <Link
+                      key={issue.title}
+                      to={`/guide/${issue.slug}`}
+                      onClick={() => setActiveDropdown(null)}
+                      className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 hover:bg-blue-50 transition"
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-white shadow-sm text-blue-600 flex items-center justify-center shrink-0">
+                        {issue.icon}
+                      </div>
+                      <span className="text-[11px] font-bold text-gray-800 line-clamp-1">
+                        {issue.title}
                       </span>
                     </Link>
                   ))}
@@ -249,7 +329,7 @@ const Header = () => {
         />
 
         <div
-          className={`absolute right-0 top-0 h-full w-full max-w-[330px] bg-white shadow-2xl transition-transform duration-300 p-7 ${isOpen ? "translate-x-0" : "translate-x-full"
+          className={`absolute right-0 top-0 h-full w-full max-w-[330px] bg-white shadow-2xl transition-transform duration-300 p-7 overflow-y-auto ${isOpen ? "translate-x-0" : "translate-x-full"
             }`}
         >
           <div className="flex justify-between items-center mb-10">
@@ -263,24 +343,45 @@ const Header = () => {
             </button>
           </div>
 
-          <nav className="space-y-5">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.path}
-                onClick={() => setIsOpen(false)}
-                className="block text-xl font-bold text-gray-800"
-              >
-                {link.name}
-              </Link>
-            ))}
+          <nav className="space-y-6">
+            <div className="space-y-3">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className="block text-lg font-bold text-gray-800"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+
+            <div className="space-y-4">
+              <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Common Fixes</p>
+              <div className="grid grid-cols-1 gap-2">
+                {commonIssues.map((issue) => (
+                  <Link
+                    key={issue.title}
+                    to={`/guide/${issue.slug}`}
+                    onClick={() => setIsOpen(false)}
+                    className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 text-gray-800 font-bold text-[13px]"
+                  >
+                    <div className="text-blue-600">
+                      {issue.icon}
+                    </div>
+                    {issue.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
 
             <Link
               to="/guides"
               onClick={() => setIsOpen(false)}
-              className="block text-xl font-bold text-blue-600"
+              className="block text-lg font-bold text-blue-600"
             >
-              Browse Guides
+              Browse All Guides
             </Link>
           </nav>
         </div>

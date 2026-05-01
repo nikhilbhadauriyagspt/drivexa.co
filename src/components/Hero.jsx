@@ -15,7 +15,7 @@ export default function Hero() {
           <img
             src="/banner/banner-01.avif"
             alt="Fix Driver Issues with Step-by-Step Installation Guides"
-            className="w-full h-[520px] md:h-[650px] lg:h-[90vh] object-cover object-center"
+            className="w-full h-full md:h-full xl:h-[90vh] object-cover object-center"
             fetchPriority="high"
             loading="eager"
             decoding="sync"

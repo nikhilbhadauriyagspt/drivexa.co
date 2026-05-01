@@ -39,7 +39,7 @@ export default function CommonProblems() {
 
   return (
     <section className="bg-white py-16 md:py-20 px-4 font-[Poppins]">
-      <div className="max-w-[1800px] mx-auto">
+      <div className="max-w-[1800px] mx-auto border-b border-[#DCDCDC] pb-16 md:pb-20">
 
         {/* Heading */}
         <div className="text-center mb-10 md:mb-12">
