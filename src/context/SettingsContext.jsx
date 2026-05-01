@@ -4,7 +4,7 @@ const SettingsContext = createContext();
 
 export const SettingsProvider = ({ children }) => {
     const [settings, setSettings] = useState({
-        contact_email: "info@misterpcdriver.com",
+        contact_email: "info@drivexa.co",
         address: "1267 Filer Ave E, Twin Falls, ID 83301, USA",
     });
 

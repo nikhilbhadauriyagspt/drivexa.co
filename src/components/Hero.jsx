@@ -1,31 +1,38 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
+import Header from "./Header";
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-full pt-16">
-      <Link to="/guides" className="relative block cursor-pointer group">
-        <img
-          src='/banner/banner_01.avif'
-          className="w-full h-full object-cover object-center min-h-[300px] md:min-h-[450px]"
-          alt="Hero Banner"
-          fetchPriority="high"
-          loading="eager"
-          decoding="sync"
-        />
-        {/* SEO-focused H1 Overlay */}
-        <div className="absolute opacity-0 inset-0 flex flex-col items-center justify-center bg-black/30 group-hover:bg-black/20 transition-all duration-500 px-4 text-center">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-2xl tracking-tight max-w-4xl leading-tight">
-            Fix Driver Issues with <span className="text-blue-400">Step-by-Step</span> Installation Guides
+    <section className="w-full bg-white px-3 md:px-8 pt-4">
+      <div className="relative max-w-[1800px] mx-auto rounded-[18px] overflow-hidden">
+
+        {/* Header inside banner image */}
+        <Header />
+
+        {/* Banner image */}
+        <Link to="/guides" className="block">
+          <img
+            src="/banner/banner-01.avif"
+            alt="Fix Driver Issues with Step-by-Step Installation Guides"
+            className="w-full h-[520px] md:h-[650px] lg:h-[90vh] object-cover object-center"
+            fetchPriority="high"
+            loading="eager"
+            decoding="sync"
+          />
+        </Link>
+
+        {/* Hidden SEO content */}
+        <div className="sr-only">
+          <h1>
+            Fix Driver Issues with Step-by-Step Installation Guides
           </h1>
-          <p className="mt-4 text-slate-200 text-sm md:text-lg font-medium max-w-2xl drop-shadow-md">
-            Solve WiFi, Audio, Printer, and USB problems easily with our verified technical documentation.
+          <p>
+            Solve WiFi, Audio, Printer, and USB problems easily with our
+            verified technical documentation.
           </p>
-          <div className="mt-8 px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-bold transition-all shadow-lg hover:shadow-blue-500/50">
-            Browse All Guides
-          </div>
         </div>
-      </Link>
+      </div>
     </section>
   );
 }

@@ -1,7 +1,12 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import {
-  FaBook, FaShieldAlt, FaLightbulb, FaTools, FaCheckCircle, FaSearch
+  FaBook,
+  FaLightbulb,
+  FaSearch,
+  FaCheckCircle,
+  FaListAlt,
+  FaInfoCircle,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -9,229 +14,257 @@ const About = () => {
   return (
     <div className="bg-white min-h-screen font-[Poppins]">
       <Helmet>
-        <title>About Us | Mister PC Driver - Step-by-Step Fix Guides</title>
-        <meta name="description" content="Learn how Mister PC Driver helps you solve hardware driver issues with easy-to-follow manuals and guides." />
+        <title>About Us | Drivexa - Driver Information Guides</title>
+        <meta
+          name="description"
+          content="Drivexa provides simple educational guides about common driver issues, device settings, and troubleshooting information."
+        />
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-16 bg-[#F8FAFC] text-center border-b border-slate-100">
-        <div className="max-w-[1200px] mx-auto px-6 relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-[11px] font-bold uppercase tracking-wider mb-6">
-            Self-Help Resource
+      {/* Hero */}
+      <section className="bg-white px-4 pt-32 pb-16">
+        <div className="max-w-[1600px] mx-auto">
+          <div className="rounded-[14px] border border-[#D6D6D6] bg-white p-3">
+            <div className="rounded-[10px] border border-[#DCDCDC] bg-[#FAFAFA] px-6 md:px-12 py-16 text-center">
+              <span className="inline-flex items-center gap-2 text-black text-[13px] font-medium mb-5">
+                <FaBook /> Educational Driver Resource
+              </span>
+
+              <h1 className="text-black text-[38px] md:text-[58px] font-normal leading-[1.05] max-w-[900px] mx-auto">
+                Clear Driver Guides for Common Device Issues
+              </h1>
+
+              <p className="text-[#4B5563] text-[15px] leading-relaxed max-w-[760px] mx-auto mt-6">
+                Drivexa shares simple, guide-based information about
+                drivers, device settings, and common hardware-related problems.
+                The website is made for learning and self-reading only.
+              </p>
+
+              <div className="flex flex-col sm:flex-row justify-center gap-4 mt-9">
+                <Link
+                  to="/guides"
+                  className="bg-black text-white px-8 py-3 rounded-full text-[14px] font-semibold hover:bg-blue-600 transition"
+                >
+                  Browse Guides
+                </Link>
+                <Link
+                  to="/faq"
+                  className="bg-white border border-[#D6D6D6] text-black px-8 py-3 rounded-full text-[14px] font-semibold hover:bg-[#F3F3F3] transition"
+                >
+                  Read FAQ
+                </Link>
+              </div>
+            </div>
           </div>
-          <h1 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            Helping You Fix <br />
-            <span className="text-blue-600">Driver Issues</span>
-          </h1>
-          <p className="text-slate-600 text-base md:text-lg font-medium leading-relaxed max-w-2xl mx-auto mb-8">
-            Mister PC Driver is a collection of simple, step-by-step guides designed to help you 
-            troubleshoot and install hardware drivers on your own.
-          </p>
         </div>
       </section>
 
-      {/* Core Mission */}
-      <section className="py-20">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">
-                What We Do
-              </h2>
-              <p className="text-slate-600 text-base leading-relaxed mb-6">
-                Many people struggle with hardware like printers, WiFi, or sound not working 
-                correctly because of driver problems. We provide clear instructions to help 
-                you identify the issue and find the right solution yourself.
-              </p>
-              <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-xl mb-8">
-                <p className="text-blue-900 font-bold text-sm">
-                  Important Note:
-                </p>
-                <p className="text-blue-800 text-sm mt-1">
-                  We are a documentation site. We provide guides and manuals only. 
-                  We do not provide direct technical support or remote assistance.
+      {/* What We Do */}
+      <section className="bg-white px-4 py-16">
+        <div className="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div>
+            <h2 className="text-black text-[34px] md:text-[46px] font-normal leading-[1.05]">
+              What This Website Provides
+            </h2>
+
+            <p className="text-[#4B5563] text-[15px] leading-relaxed mt-6">
+              This website provides written information about common driver
+              topics such as printer drivers, WiFi drivers, audio drivers,
+              graphics drivers, USB issues, Bluetooth problems, and device
+              detection errors.
+            </p>
+
+            <div className="mt-8 rounded-[14px] border border-[#D6D6D6] bg-white p-3">
+              <div className="rounded-[10px] border border-[#DCDCDC] bg-[#FAFAFA] p-6">
+                <h3 className="text-black text-[20px] font-semibold mb-3">
+                  Important Note
+                </h3>
+                <p className="text-[#4B5563] text-[14px] leading-relaxed">
+                  Drivexa is an informational guide website. We do not
+                  provide technical support, remote access, repair service,
+                  live assistance, or driver downloads.
                 </p>
               </div>
             </div>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <SimpleCard 
-                icon={<FaBook className="text-blue-600" />}
-                title="Easy Guides"
-                desc="Simple steps for installing and updating drivers."
-              />
-              <SimpleCard 
-                icon={<FaSearch className="text-blue-600" />}
-                title="Problem Solving"
-                desc="Guides to help you fix common hardware errors."
-              />
-              <SimpleCard 
-                icon={<FaTools className="text-blue-600" />}
-                title="Universal Fixes"
-                desc="Covers printers, audio, graphics, and more."
-              />
-              <SimpleCard 
-                icon={<FaCheckCircle className="text-blue-600" />}
-                title="Free Access"
-                desc="All our fix manuals are free to read and follow."
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Use Our Guides */}
-      <section className="py-20 bg-slate-50 border-y border-slate-100">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">Why Follow Our Manuals?</h2>
-            <p className="text-slate-500 text-sm md:text-base max-w-2xl mx-auto">We focus on making technical tasks easy for everyone, regardless of their computer skills.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <ValueItem 
-              title="Step-by-Step"
-              desc="Our guides are broken down into small, manageable steps so you don't get lost."
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <InfoCard
+              icon={<FaBook />}
+              title="Driver Guides"
+              desc="Simple articles about common driver-related situations."
             />
-            <ValueItem 
-              title="Verified Steps"
-              desc="We research the most effective ways to solve driver issues before writing our guides."
+            <InfoCard
+              icon={<FaSearch />}
+              title="Issue Awareness"
+              desc="Information to understand what may cause a device problem."
             />
-            <ValueItem 
-              title="No Hidden Steps"
-              desc="We show you exactly where to go and what to click to get your hardware working."
+            <InfoCard
+              icon={<FaLightbulb />}
+              title="Easy Language"
+              desc="Content written in a clear and simple reading style."
+            />
+            <InfoCard
+              icon={<FaCheckCircle />}
+              title="Educational Use"
+              desc="Guide content made for learning and general awareness."
             />
           </div>
         </div>
       </section>
 
-      {/* How to Use Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-12 text-center">How to Use This Site</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <StepItem 
+      {/* Why Our Guides */}
+      <section className="bg-white px-4 py-16">
+        <div className="max-w-[1600px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-12">
+            <h2 className="text-black text-[34px] md:text-[46px] font-normal leading-[1.05]">
+              Why Read Our Driver Guides?
+            </h2>
+
+            <p className="text-[#334155] text-[14px] leading-relaxed max-w-[520px] lg:ml-auto lg:text-right">
+              Our content is organized to make driver-related topics easier to
+              understand before users make changes on their own device.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <ValueItem
+              title="Simple Structure"
+              desc="Guides are written in small sections so users can understand the topic step by step."
+            />
+            <ValueItem
+              title="Common Topics"
+              desc="We cover frequent driver issues related to audio, WiFi, printers, graphics, USB, and more."
+            />
+            <ValueItem
+              title="No Service Claims"
+              desc="The website only provides educational information and does not claim to fix devices directly."
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* How To Use */}
+      <section className="bg-white px-4 py-16">
+        <div className="max-w-[1600px] mx-auto">
+          <h2 className="text-black text-[34px] md:text-[46px] font-normal leading-[1.05] text-center mb-12">
+            How to Use This Website
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <StepItem
               number="01"
-              title="Search Your Issue"
-              desc="Type your hardware name or the error you're seeing into our search bar."
+              title="Choose a Topic"
+              desc="Select the driver category or device issue you want to learn about."
             />
-            <StepItem 
+            <StepItem
               number="02"
               title="Read the Guide"
-              desc="Follow our easy, step-by-step instructions written in plain language."
+              desc="Go through the information carefully and understand the possible reasons."
             />
-            <StepItem 
+            <StepItem
               number="03"
-              title="Fix Your Device"
-              desc="Apply the steps to your computer and get your hardware back to work."
+              title="Review Safely"
+              desc="Use the guide as general information before changing settings on your device."
             />
           </div>
         </div>
       </section>
 
-      {/* Our Goal Section */}
-      <section className="py-20 bg-blue-600 text-white">
-        <div className="max-w-[1000px] mx-auto px-6 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6">Our Simple Goal</h2>
-          <p className="text-lg text-blue-100 leading-relaxed">
-            We believe that you shouldn't need to be a computer expert to fix basic hardware problems. 
-            Our goal is to give every user the confidence to manage their own PC drivers 
-            without needing to pay for expensive technical support.
-          </p>
-        </div>
-      </section>
+      {/* Coverage */}
+      <section className="bg-white px-4 py-16">
+        <div className="max-w-[1600px] mx-auto rounded-[14px] border border-[#D6D6D6] bg-white p-3">
+          <div className="rounded-[10px] border border-[#DCDCDC] bg-[#FAFAFA] p-8 md:p-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+              <div>
+                <h2 className="text-black text-[34px] md:text-[46px] font-normal leading-[1.05]">
+                  Driver Topics We Cover
+                </h2>
+                <p className="text-[#4B5563] text-[15px] leading-relaxed mt-5">
+                  Our guide library includes common driver and device-related
+                  topics that users often search for.
+                </p>
+              </div>
 
-      {/* Device Coverage Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="flex flex-col md:flex-row gap-12 items-center">
-            <div className="md:w-1/2">
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">Common Guides We Offer</h2>
-              <p className="text-slate-600 mb-8">We are constantly adding new manuals to our archive. Here are the most common hardware issues we help people fix:</p>
-              <ul className="grid grid-cols-2 gap-4">
-                <li className="flex items-center gap-2 text-slate-700 font-medium">
-                  <div className="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                  Printer & Scanners
-                </li>
-                <li className="flex items-center gap-2 text-slate-700 font-medium">
-                  <div className="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                  WiFi & Bluetooth
-                </li>
-                <li className="flex items-center gap-2 text-slate-700 font-medium">
-                  <div className="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                  Audio & Sound
-                </li>
-                <li className="flex items-center gap-2 text-slate-700 font-medium">
-                  <div className="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                  Graphics & Display
-                </li>
-                <li className="flex items-center gap-2 text-slate-700 font-medium">
-                  <div className="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                  USB & Keyboards
-                </li>
-                <li className="flex items-center gap-2 text-slate-700 font-medium">
-                  <div className="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                  Webcams & Mice
-                </li>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  "Printer & Scanner Drivers",
+                  "WiFi & Network Drivers",
+                  "Audio & Sound Drivers",
+                  "Graphics & Display Drivers",
+                  "USB & Input Devices",
+                  "Bluetooth & Webcam Issues",
+                ].map((item, index) => (
+                  <li
+                    key={index}
+                    className="bg-white border border-[#DCDCDC] rounded-[10px] p-4 flex items-center gap-3 text-black text-[14px] font-medium"
+                  >
+                    <span className="w-2 h-2 rounded-full bg-black" />
+                    {item}
+                  </li>
+                ))}
               </ul>
-            </div>
-            <div className="md:w-1/2 bg-slate-50 p-8 rounded-3xl border border-slate-100">
-              <p className="text-slate-500 italic text-center">
-                "Our guides are designed to be used by anyone, from students to seniors. 
-                We keep it simple so you can get things done."
-              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Bottom CTA */}
-      <section className="py-20">
-        <div className="max-w-[1000px] mx-auto px-6">
-          <div className="bg-[#071A3D] rounded-3xl p-10 md:p-16 text-center text-white">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              Need to fix a driver issue?
-            </h2>
-            <p className="text-white/70 text-base mb-8 max-w-lg mx-auto">
-              Browse our archive of guides to find the fix for your specific device.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link to="/guides" className="bg-blue-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-blue-700 transition">
-                View All Guides
-              </Link>
-              <Link to="/faq" className="bg-white/10 text-white border border-white/20 px-8 py-3 rounded-xl font-bold hover:bg-white/20 transition">
-                Common Questions
-              </Link>
-            </div>
-          </div>
+      <section className="bg-white px-4 py-16">
+        <div className="max-w-[1000px] mx-auto text-center">
+          <h2 className="text-black text-[34px] md:text-[46px] font-normal leading-[1.05]">
+            Start Reading Driver Guides
+          </h2>
+
+          <p className="text-[#4B5563] text-[15px] leading-relaxed mt-5 max-w-[620px] mx-auto">
+            Browse our educational guide library to learn about common driver
+            problems and device-related topics.
+          </p>
+
+          <Link
+            to="/guides"
+            className="inline-flex mt-8 bg-black text-white px-8 py-3 rounded-full text-[14px] font-semibold hover:bg-blue-600 transition"
+          >
+            View All Guides
+          </Link>
         </div>
       </section>
     </div>
   );
 };
 
-const SimpleCard = ({ icon, title, desc }) => (
-  <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-    <div className="text-xl mb-3">{icon}</div>
-    <h4 className="font-bold text-slate-900 mb-1 text-sm uppercase tracking-wide">{title}</h4>
-    <p className="text-slate-500 text-xs leading-relaxed">{desc}</p>
+const InfoCard = ({ icon, title, desc }) => (
+  <div className="rounded-[14px] border border-[#D6D6D6] bg-white p-3">
+    <div className="min-h-[180px] rounded-[10px] border border-[#DCDCDC] bg-[#FAFAFA] p-6 flex flex-col justify-between">
+      <div className="w-11 h-11 rounded-[8px] bg-white border border-[#E5E7EB] flex items-center justify-center text-black">
+        {icon}
+      </div>
+      <div>
+        <h4 className="text-black text-[19px] font-semibold mb-2">{title}</h4>
+        <p className="text-[#4B5563] text-[14px] leading-relaxed">{desc}</p>
+      </div>
+    </div>
   </div>
 );
 
 const ValueItem = ({ title, desc }) => (
-  <div className="bg-white p-8 rounded-2xl border border-slate-100 text-center">
-    <h4 className="text-lg font-bold text-slate-900 mb-3">{title}</h4>
-    <p className="text-slate-600 text-sm leading-relaxed">{desc}</p>
+  <div className="rounded-[14px] border border-[#D6D6D6] bg-white p-3">
+    <div className="min-h-[210px] rounded-[10px] border border-[#DCDCDC] bg-[#FAFAFA] p-7 flex flex-col justify-end">
+      <h4 className="text-black text-[22px] font-semibold mb-3">{title}</h4>
+      <p className="text-[#4B5563] text-[14px] leading-relaxed">{desc}</p>
+    </div>
   </div>
 );
 
 const StepItem = ({ number, title, desc }) => (
-  <div className="relative p-8 rounded-2xl border border-slate-100 bg-slate-50/50">
-    <span className="absolute -top-4 -left-4 w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center font-bold text-lg shadow-lg shadow-blue-200">
-      {number}
-    </span>
-    <h4 className="text-lg font-bold text-slate-900 mb-3 mt-2">{title}</h4>
-    <p className="text-slate-600 text-sm leading-relaxed">{desc}</p>
+  <div className="rounded-[14px] border border-[#D6D6D6] bg-white p-3">
+    <div className="min-h-[220px] rounded-[10px] border border-[#DCDCDC] bg-[#FAFAFA] p-7 flex flex-col justify-between">
+      <span className="text-black text-[20px] font-medium">{number}</span>
+      <div>
+        <h4 className="text-black text-[22px] font-semibold mb-3">{title}</h4>
+        <p className="text-[#4B5563] text-[14px] leading-relaxed">{desc}</p>
+      </div>
+    </div>
   </div>
 );
 

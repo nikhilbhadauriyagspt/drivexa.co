@@ -6,62 +6,79 @@ import { guidesData } from "../data/guidesData";
 
 const Guides = () => {
   return (
-    <div className="bg-[#F7FAFF] min-h-screen pt-28 pb-20 font-[Poppins]">
+    <div className="bg-white min-h-screen pt-28 pb-20 font-[Poppins]">
       <Helmet>
-        <title>Popular Driver Guides | Step-by-Step Fixes | Mister PC Driver</title>
-        <meta name="description" content="Browse our library of popular driver guides to fix printer, audio, wifi, and graphics driver issues on your Windows PC." />
+        <title>Driver Information Guides | Drivexa</title>
+        <meta
+          name="description"
+          content="Browse simple educational driver guides about printer, audio, WiFi, graphics, USB, Bluetooth, and common device-related topics."
+        />
       </Helmet>
 
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-[12px] font-semibold uppercase tracking-widest mb-6">
-            <BookOpen className="w-4 h-4" />
-            Information Library
+      <div className="max-w-[1600px] mx-auto px-4">
+        {/* Header */}
+        <div className="rounded-[14px] border border-[#D6D6D6] bg-white p-3 mb-12">
+          <div className="rounded-[10px] border border-[#DCDCDC] bg-[#FAFAFA] px-6 md:px-12 py-14 text-center">
+            <span className="inline-flex items-center gap-2 text-black text-[13px] font-medium mb-5">
+              <BookOpen size={18} strokeWidth={1.8} />
+              Educational Guide Library
+            </span>
+
+            <h1 className="text-black text-[38px] md:text-[56px] font-normal leading-[1.05] max-w-[900px] mx-auto">
+              Browse Driver Information Guides
+            </h1>
+
+            <p className="text-[#4B5563] text-[15px] leading-relaxed max-w-[760px] mx-auto mt-6">
+              Read simple guide-based information about common driver topics,
+              device settings, and hardware communication issues.
+            </p>
           </div>
-          <h1 className="text-[36px] md:text-[46px] font-bold text-[#07153A] tracking-tight mb-4">
-            Browse All <span className="text-blue-600 font-bold">Guides</span>
-          </h1>
-          <p className="text-[#667085] text-[16px] max-w-2xl mx-auto font-medium leading-relaxed">
-            Simple step-by-step articles to help you understand and resolve common hardware communication issues.
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Guides Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
           {guidesData.map((guide, index) => (
-            <Link 
+            <Link
               key={index}
               to={`/guide/${guide.slug}`}
-              className="bg-white rounded-[10px] border border-[#E6ECF8] overflow-hidden group hover:border-blue-400 transition-all duration-300 flex flex-col h-full"
+              className="group rounded-[14px] border border-[#D6D6D6] bg-white p-3 transition-all duration-300 hover:shadow-[0_18px_40px_rgba(15,23,42,0.08)]"
             >
-              <div className="w-full h-[220px] bg-white border-b border-[#F0F4FA] p-6 flex items-center justify-center overflow-hidden">
-                <img 
-                  src={guide.img} 
-                  alt={guide.title} 
-                  className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-
-              <div className="p-6 flex flex-col flex-1">
-                <div className="flex items-center gap-3 mb-3 text-[11px] font-semibold text-[#667085] uppercase tracking-wider">
-                  <span className="flex items-center gap-1.5">
-                    <Clock className="w-3.5 h-3.5 text-blue-600" />
-                    5 Min
-                  </span>
-                  <span className="w-1 h-1 rounded-full bg-slate-300" />
-                  <span>Technical Guide</span>
+              <div className="rounded-[10px] border border-[#DCDCDC] bg-[#FAFAFA] overflow-hidden h-full flex flex-col">
+                <div className="w-full h-[230px] bg-white border-b border-[#DCDCDC] p-6 flex items-center justify-center overflow-hidden">
+                  <img
+                    src={guide.img}
+                    alt={guide.title}
+                    className="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                  />
                 </div>
 
-                <h2 className="text-[19px] font-bold text-[#07153A] mb-3 group-hover:text-blue-600 transition-colors leading-snug">
-                  {guide.title}
-                </h2>
+                <div className="p-6 flex flex-col flex-1">
+                  <div className="flex items-center gap-3 mb-4 text-[12px] text-[#4B5563]">
+                    <span className="flex items-center gap-1.5">
+                      <Clock size={14} strokeWidth={1.8} />
+                      5 Min Read
+                    </span>
+                    <span className="w-1 h-1 rounded-full bg-[#9CA3AF]" />
+                    <span>Guide Article</span>
+                  </div>
 
-                <p className="text-[#667085] text-[14px] leading-relaxed font-medium mb-6 line-clamp-2">
-                  {guide.desc}
-                </p>
+                  <h2 className="text-black text-[21px] font-semibold mb-3 leading-snug">
+                    {guide.title}
+                  </h2>
 
-                <div className="mt-auto flex items-center gap-2 text-[13px] font-bold text-blue-600 uppercase tracking-widest">
-                  Read Article
-                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <p className="text-[#4B5563] text-[14px] leading-relaxed mb-6 line-clamp-2">
+                    {guide.desc}
+                  </p>
+
+                  <div className="mt-auto flex items-center justify-between pt-5 border-t border-[#DCDCDC]">
+                    <span className="text-black text-[14px] font-semibold">
+                      Read Guide
+                    </span>
+
+                    <div className="w-10 h-10 rounded-[8px] bg-white border border-[#E5E7EB] flex items-center justify-center text-black group-hover:bg-black group-hover:text-white transition">
+                      <ChevronRight size={18} />
+                    </div>
+                  </div>
                 </div>
               </div>
             </Link>

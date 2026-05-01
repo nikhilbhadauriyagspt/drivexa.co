@@ -1,114 +1,128 @@
 import React from "react";
-import {
-  Settings,
-  Mail
-} from "lucide-react";
+import { Mail, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <>
-      {/* Main Footer - Professional & Clean */}
-      <footer className="bg-[#040B1D] text-white px-6 pt-20 pb-10 font-[Poppins] border-t border-white/5">
-        <div className="max-w-[1600px] mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-12 pb-16">
+    <footer className="bg-white px-4 pt-16 pb-6 font-[Poppins]">
+      <div className="max-w-[1800px] mx-auto rounded-[14px] border border-[#D6D6D6] bg-white p-3">
+        <div className="rounded-[10px] border border-[#DCDCDC] bg-[#FAFAFA] overflow-hidden">
 
-            {/* Brand Section */}
-            <div className="lg:col-span-2">
-              <Link to="/" className="flex items-center gap-3 mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[34%_66%]">
+            {/* Brand */}
+            <div className="p-8 md:p-10 border-b lg:border-b-0 lg:border-r border-[#DCDCDC]">
+              <Link to="/" className="inline-flex items-center mb-6">
                 <img
                   src="/logo/logo.avif"
-                  alt="Mister PC Driver"
-                  className="h-10 w-auto object-contain bg-white py-1 px-2 rounded-full"
+                  alt="Drivexa"
+                  className="h-10 w-auto object-contain"
                 />
               </Link>
 
-              <p className="text-[14px] leading-relaxed text-white/50 font-medium max-w-[280px] mb-8">
-                Your resource for understanding hardware drivers and device communication.
+              <h3 className="text-black text-[28px] md:text-[34px] font-normal leading-tight max-w-[420px]">
+                Simple driver information for everyday device issues.
+              </h3>
+
+              <p className="text-[#4B5563] text-[14px] leading-relaxed mt-5 max-w-[390px]">
+                Your resource for understanding hardware drivers and device
+                communication. All information is for educational purposes.
               </p>
+
+              <a
+                href="mailto:info@drivexa.co"
+                className="inline-flex items-center gap-2 mt-8 bg-black text-white px-6 py-3 rounded-full text-[14px] font-semibold hover:bg-blue-600 transition"
+              >
+                <Mail size={16} />
+                Email Us
+              </a>
             </div>
 
-            <FooterColumn
-              title="Quick Links"
-              links={[
-                { name: "Home", path: "/" },
-                { name: "About", path: "/about" },
-                { name: "Guides", path: "/guides" },
-                { name: "FAQ", path: "/faq" },
-                { name: "Contact", path: "/contact" }
-              ]}
-            />
+            {/* Links */}
+            <div className="p-8 md:p-10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
+                <FooterColumn
+                  title="Quick Links"
+                  links={[
+                    { name: "Home", path: "/" },
+                    { name: "About", path: "/about" },
+                    { name: "Guides", path: "/guides" },
+                    { name: "FAQ", path: "/faq" },
+                    { name: "Contact", path: "/contact" },
+                  ]}
+                />
 
-            <FooterColumn
-              title="Guides"
-              links={[
-                { name: "Installation Guides", path: "/guide/fix-driver-not-installed" },
-                { name: "Update Information", path: "/guide/fix-driver-not-installed" },
-                { name: "Hardware Connection", path: "/guide/fix-usb-driver-issues" },
-                { name: "Audio Problems", path: "/guide/fix-audio-driver-problems" },
-                { name: "WiFi & Network", path: "/guide/fix-wifi-network-issues" },
-                { name: "Graphics & Display", path: "/guide/fix-graphics-driver-issues" },
-              ]}
-            />
+                <FooterColumn
+                  title="Guides"
+                  links={[
+                    { name: "Installation Guides", path: "/guide/fix-driver-not-installed" },
+                    { name: "Update Information", path: "/guide/fix-driver-not-installed" },
+                    { name: "Hardware Connection", path: "/guide/fix-usb-driver-issues" },
+                    { name: "Audio Problems", path: "/guide/fix-audio-driver-problems" },
+                    { name: "WiFi & Network", path: "/guide/fix-wifi-network-issues" },
+                    { name: "Graphics & Display", path: "/guide/fix-graphics-driver-issues" },
+                  ]}
+                />
 
-            <FooterColumn
-              title="Driver Topics"
-              links={[
-                { name: "Printer Drivers", path: "/driver/printer-drivers" },
-                { name: "Network Drivers", path: "/driver/network-drivers" },
-                { name: "Audio Drivers", path: "/driver/audio-drivers" },
-                { name: "Graphics Drivers", path: "/driver/graphics-drivers" },
-                { name: "Bluetooth Drivers", path: "/driver/bluetooth-drivers" },
-                { name: "USB Support", path: "/driver/usb-support" },
-              ]}
-            />
+                <FooterColumn
+                  title="Driver Topics"
+                  links={[
+                    { name: "Printer Drivers", path: "/driver/printer-drivers" },
+                    { name: "Network Drivers", path: "/driver/network-drivers" },
+                    { name: "Audio Drivers", path: "/driver/audio-drivers" },
+                    { name: "Graphics Drivers", path: "/driver/graphics-drivers" },
+                    { name: "Bluetooth Drivers", path: "/driver/bluetooth-drivers" },
+                    { name: "USB Support", path: "/driver/usb-support" },
+                  ]}
+                />
 
-            <div className="space-y-10">
-              <FooterColumn
-                title="Policies"
-                links={[
-                  { name: "Privacy Policy", path: "/privacy-policy" },
-                  { name: "Terms of Service", path: "/terms-of-service" },
-                  { name: "Cookie Policy", path: "/cookie-policy" },
-                  { name: "Disclaimer", path: "/disclaimer" },
-                ]}
-              />
-
-              <div>
-                <h4 className="text-[14px] font-bold text-blue-500 uppercase tracking-widest mb-4">Email Us</h4>
-                <a href="mailto:info@misterpcdriver.com" className="flex items-center gap-2 text-[14px] text-white/60 hover:text-white transition-colors">
-                  <Mail className="w-4 h-4" />
-                  info@misterpcdriver.com
-                </a>
+                <FooterColumn
+                  title="Policies"
+                  links={[
+                    { name: "Privacy Policy", path: "/privacy-policy" },
+                    { name: "Terms of Service", path: "/terms-of-service" },
+                    { name: "Cookie Policy", path: "/cookie-policy" },
+                    { name: "Disclaimer", path: "/disclaimer" },
+                  ]}
+                />
               </div>
             </div>
           </div>
 
-          {/* Bottom Bar */}
-          <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
-            <p className="text-[13px] text-white/30 font-medium text-center md:text-left">
-              © {currentYear} Mister PC Driver. All information is for educational purposes.
+          {/* Bottom */}
+          <div className="border-t border-[#DCDCDC] px-8 md:px-10 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-[#4B5563] text-[13px] text-center md:text-left">
+              © {currentYear} Drivexa. All information is for educational purposes.
             </p>
+
+            <Link
+              to="/guides"
+              className="inline-flex items-center gap-2 text-black text-[13px] font-semibold hover:text-blue-600 transition"
+            >
+              Browse Guides
+              <ArrowRight size={15} />
+            </Link>
           </div>
         </div>
-      </footer>
-    </>
+      </div>
+    </footer>
   );
 }
 
 function FooterColumn({ title, links }) {
   return (
     <div>
-      <h4 className="text-[14px] font-bold text-blue-500 uppercase tracking-widest mb-6">{title}</h4>
+      <h4 className="text-black text-[15px] font-semibold mb-5">
+        {title}
+      </h4>
 
-      <ul className="space-y-4">
+      <ul className="space-y-3">
         {links.map((link, index) => (
           <li key={index}>
             <Link
               to={link.path}
-              className="text-[14px] text-white/50 font-medium hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+              className="text-[#4B5563] text-[14px] hover:text-black transition-colors"
             >
               {link.name}
             </Link>

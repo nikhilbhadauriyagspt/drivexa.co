@@ -9,8 +9,8 @@ const PrivacyPolicy = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24 font-poppins">
       <Helmet>
-        <title>Privacy Policy | Mister PC Driver Official Standards</title>
-        <meta name="description" content="Detailed Privacy Policy for Mister PC Driver. Understand how we collect, use, and protect your technical data." />
+        <title>Privacy Policy | Drivexa Official Standards</title>
+        <meta name="description" content="Detailed Privacy Policy for Drivexa. Understand how we collect, use, and protect your technical data." />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-5xl">
@@ -20,17 +20,17 @@ const PrivacyPolicy = () => {
         <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-8">
           <section>
             <p>
-              This Privacy Notice for Mister PC Driver ("<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>"), describes how and why we
+              This Privacy Notice for Drivexa ("<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>"), describes how and why we
               might access, collect, store, use, and/or share ("<strong>process</strong>") your personal information when
               you use our services ("<strong>Services</strong>"), including when you:
             </p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Visit our website at <a href="https://www.misterpcdriver.com/" className="text-primary hover:text-secondary">https://www.misterpcdriver.com/</a> or any website of ours that links to this Privacy Notice</li>
-              <li>Use Mister PC Driver. At Mister PC Driver, we focus on technical accuracy and timely service. Our business is built on providing diagnostic clarity and performing repairs that aim to extend the lifecycle of your household appliances. We serve residential clients with a commitment to maintaining standard operating procedures.</li>
+              <li>Visit our website at <a href="https://www.drivexa.co/" className="text-primary hover:text-secondary">https://www.drivexa.co/</a> or any website of ours that links to this Privacy Notice</li>
+              <li>Use Drivexa. At Drivexa, we focus on technical accuracy and providing high-quality hardware documentation. Our platform is built on providing technical clarity and installation guides to help users understand their system drivers and hardware communication.</li>
               <li>Engage with us in other related ways, including any marketing or events</li>
             </ul>
             <p>
-              <strong>Questions or concerns?</strong> Reading this Privacy Notice will help you understand your privacy rights and choices. We are responsible for making decisions about how your personal information is processed. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at <a href="mailto:info@misterpcdriver.com" className="text-primary">info@misterpcdriver.com</a>.
+              <strong>Questions or concerns?</strong> Reading this Privacy Notice will help you understand your privacy rights and choices. We are responsible for making decisions about how your personal information is processed. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at <a href="mailto:info@drivexa.co" className="text-primary">info@drivexa.co</a>.
             </p>
           </section>
 
@@ -160,7 +160,7 @@ const PrivacyPolicy = () => {
           <section id="minors">
             <h3 className="text-xl font-bold text-gray-900 border-b pb-2 mb-4">8. DO WE COLLECT INFORMATION FROM MINORS?</h3>
             <p><em>In Short: We do not knowingly collect data from or market to children under 18 years of age or the equivalent age as specified by law in your jurisdiction.</em></p>
-            <p>We do not knowingly collect, solicit data from, or market to children under 18 years of age or the equivalent age as specified by law in your jurisdiction, nor do we knowingly sell such personal information. By using the Services, you represent that you are at least 18 or the equivalent age as specified by law in your jurisdiction or that you are the parent or guardian of such a minor and consent to such minor dependent’s use of the Services. If we learn that personal information from users less than 18 years of age or the equivalent age as specified by law in your jurisdiction has been collected, we will deactivate the account and take reasonable measures to promptly delete such data from our records. If you become aware of any data we may have collected from children under age 18 or the equivalent age as specified by law in your jurisdiction, please contact us at <a href="mailto:info@misterpcdriver.com" className="text-primary">info@misterpcdriver.com</a>.</p>
+            <p>We do not knowingly collect, solicit data from, or market to children under 18 years of age or the equivalent age as specified by law in your jurisdiction, nor do we knowingly sell such personal information. By using the Services, you represent that you are at least 18 or the equivalent age as specified by law in your jurisdiction or that you are the parent or guardian of such a minor and consent to such minor dependent’s use of the Services. If we learn that personal information from users less than 18 years of age or the equivalent age as specified by law in your jurisdiction has been collected, we will deactivate the account and take reasonable measures to promptly delete such data from our records. If you become aware of any data we may have collected from children under age 18 or the equivalent age as specified by law in your jurisdiction, please contact us at <a href="mailto:info@drivexa.co" className="text-primary">info@drivexa.co</a>.</p>
           </section>
 
           <section id="rights">
@@ -170,7 +170,7 @@ const PrivacyPolicy = () => {
             <p>We will consider and act upon any request in accordance with applicable data protection laws.</p>
             <p><strong>Withdrawing your consent:</strong> If we are relying on your consent to process your personal information, which may be express and/or implied consent depending on the applicable law, you have the right to withdraw your consent at any time. You can withdraw your consent at any time by contacting us by using the contact details provided in the section "HOW CAN YOU CONTACT US ABOUT THIS NOTICE?" below.</p>
             <p>However, please note that this will not affect the lawfulness of the processing before its withdrawal nor, when applicable law allows, will it affect the processing of your personal information conducted in reliance on lawful processing grounds other than consent.</p>
-            <p>If you have questions or comments about your privacy rights, you may email us at <a href="mailto:info@misterpcdriver.com" className="text-primary">info@misterpcdriver.com</a>.</p>
+            <p>If you have questions or comments about your privacy rights, you may email us at <a href="mailto:info@drivexa.co" className="text-primary">info@drivexa.co</a>.</p>
           </section>
 
           <section id="dnt">
@@ -301,13 +301,13 @@ const PrivacyPolicy = () => {
             </ul>
 
             <p className="font-bold mt-6">How to Exercise Your Rights</p>
-            <p>To exercise these rights, you can contact us by submitting a data subject access request, by emailing us at <a href="mailto:info@misterpcdriver.com" className="text-primary">info@misterpcdriver.com</a>, or by referring to the contact details at the bottom of this document.</p>
+            <p>To exercise these rights, you can contact us by submitting a data subject access request, by emailing us at <a href="mailto:info@drivexa.co" className="text-primary">info@drivexa.co</a>, or by referring to the contact details at the bottom of this document.</p>
             <p>Under certain US state data protection laws, you can designate an authorized agent to make a request on your behalf. We may deny a request from an authorized agent that does not submit proof that they have been validly authorized to act on your behalf in accordance with applicable laws.</p>
             <p className="font-bold mt-6">Request Verification</p>
             <p>Upon receiving your request, we will need to verify your identity to determine you are the same person about whom we have the information in our system. We will only use personal information provided in your request to verify your identity or authority to make the request. However, if we cannot verify your identity from the information already maintained by us, we may request that you provide additional information for the purposes of verifying your identity and for security or fraud-prevention purposes.</p>
             <p>If you submit the request through an authorized agent, we may need to collect additional information to verify your identity before processing your request and the agent will need to provide a written and signed permission from you to submit such request on your behalf.</p>
             <p className="font-bold mt-6">Appeals</p>
-            <p>Under certain US state data protection laws, if we decline to take action regarding your request, you may appeal our decision by emailing us at <a href="mailto:info@misterpcdriver.com" className="text-primary">info@misterpcdriver.com</a>. We will inform you in writing of any action taken or not taken in response to the appeal, including a written explanation of the reasons for the decisions. If your appeal is denied, you may submit a complaint to your state attorney general.</p>
+            <p>Under certain US state data protection laws, if we decline to take action regarding your request, you may appeal our decision by emailing us at <a href="mailto:info@drivexa.co" className="text-primary">info@drivexa.co</a>. We will inform you in writing of any action taken or not taken in response to the appeal, including a written explanation of the reasons for the decisions. If your appeal is denied, you may submit a complaint to your state attorney general.</p>
           </section>
 
           <section id="updates">
@@ -318,8 +318,8 @@ const PrivacyPolicy = () => {
 
           <section id="contact">
             <h3 className="text-xl font-bold text-gray-900 border-b pb-2 mb-4">13. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</h3>
-            <p>If you have questions or comments about this notice, you may email us at <strong>info@misterpcdriver.com</strong> or contact us by post at:</p>
-            <p>Email: <strong>info@misterpcdriver.com</strong></p>
+            <p>If you have questions or comments about this notice, you may email us at <strong>info@drivexa.co</strong> or contact us by post at:</p>
+            <p>Email: <strong>info@drivexa.co</strong></p>
           </section>
 
           <section id="review">

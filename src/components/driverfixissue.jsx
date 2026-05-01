@@ -1,96 +1,101 @@
 import React from "react";
-import {
-    Printer, Wifi, Volume2, Monitor, Bluetooth, Usb, ScanLine,
-    Cpu, HardDrive, Touchpad, Video, ShieldCheck, Search,
-    ShieldAlert, Tv, ArrowRight
-} from "lucide-react";
+import { Search, Settings, BookOpen, CheckCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
-export default function DriverTypesAndFix() {
-
-    const drivers = [
-        { title: "Printer", icon: Printer },
-        { title: "Network", icon: Wifi },
-        { title: "Audio", icon: Volume2 },
-        { title: "Graphics", icon: Monitor },
-        { title: "Bluetooth", icon: Bluetooth },
-        { title: "USB", icon: Usb },
-        { title: "Scanner", icon: ScanLine },
-        { title: "Chipset", icon: Cpu },
-        { title: "Storage", icon: HardDrive },
-        { title: "Touchpad", icon: Touchpad },
-        { title: "Webcam", icon: Video },
-        { title: "BIOS", icon: ShieldCheck },
-        { title: "Search", icon: Search },
-        { title: "Security", icon: ShieldAlert },
-        { title: "Monitor", icon: Tv },
-    ];
-
+export default function DriverProcessSection() {
     const steps = [
-        "Identify the issue clearly",
-        "Check device connection",
-        "Review system settings",
-        "Understand driver status",
-        "Update or reinstall if needed",
-
+        {
+            no: "01",
+            title: "Identify the Driver Issue",
+            desc: "Check whether the problem is related to printer, audio, WiFi, USB, graphics, Bluetooth, or another device driver.",
+            icon: Search,
+            link: "/guides",
+        },
+        {
+            no: "02",
+            title: "Review Device Settings",
+            desc: "Look at basic system settings, connected devices, and error messages before making any changes.",
+            icon: Settings,
+            link: "/guides",
+        },
+        {
+            no: "03",
+            title: "Follow the Right Guide",
+            desc: "Use simple step-by-step information to understand the possible cause and safe next steps.",
+            icon: BookOpen,
+            link: "/guides",
+        },
+        {
+            no: "04",
+            title: "Check Everything Again",
+            desc: "After following the guide, restart the device if needed and confirm whether the issue is resolved.",
+            icon: CheckCircle,
+            link: "/guides",
+        },
     ];
 
     return (
-        <section className="bg-[#F8FAFF] py-20 px-6 font-[Poppins]">
-            <div className="max-w-[1600px] mx-auto grid lg:grid-cols-2 gap-16 items-start">
-
-                {/* LEFT SIDE */}
-                <div>
-                    <p className="text-blue-600 text-[11px] font-semibold uppercase tracking-[0.18em] mb-3">
-                        Learning Flow
-                    </p>
-
-                    <h2 className="text-[34px] md:text-[42px] font-semibold text-[#0F1B3D] leading-tight">
-                        Understand How Issues Are Explored
+        <section className="bg-white py-16 md:py-20 px-4 font-[Poppins] overflow-hidden">
+            <div className="max-w-[1800px] mx-auto">
+                {/* Top Heading */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-14">
+                    <h2 className="text-black text-[34px] md:text-[44px] lg:text-[50px] font-normal leading-[1.02] max-w-5xl">
+                        Simple Steps to Understand Driver Problems
                     </h2>
 
-                    <p className="text-[#5B6478] text-[15px] mt-3 max-w-[520px]">
-                        Follow a simple structured approach to understand how driver-related
-                        topics are explained step by step.
+                    <p className="text-[#334155] text-[14px] leading-relaxed max-w-[620px] lg:ml-auto lg:text-right pt-3">
+                        Our guides are made for learning only. They help you understand
+                        common driver issues clearly without offering downloads or technical
+                        support services.
                     </p>
+                </div>
 
-                    {/* TIMELINE */}
-                    <div className="mt-8 space-y-5">
-                        {steps.map((step, index) => (
-                            <div key={index} className="flex items-start gap-4">
+                {/* Process Layout */}
+                <div className="relative">
+                    {/* Connector Lines */}
+                    <div className="hidden lg:block absolute left-[42%] right-[18%] top-[95px] h-[1.5px] bg-[#9DB2FF]" />
+                    <div className="hidden lg:block absolute left-[42%] right-[18%] top-[265px] h-[1.5px] bg-[#9DB2FF]" />
+                    <div className="hidden lg:block absolute left-[42%] top-[95px] h-[170px] w-[1.5px] bg-[#9DB2FF]" />
+                    <div className="hidden lg:block absolute right-[18%] top-[95px] h-[170px] w-[1.5px] bg-[#9DB2FF]" />
 
-                                <div className="flex flex-col items-center">
-                                    <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-[13px] font-medium">
-                                        {index + 1}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-12 lg:gap-y-14 gap-x-10">
+                        {steps.map((step, index) => {
+                            const Icon = step.icon;
+                            const isRight = index % 2 === 1;
+
+                            return (
+                                <Link
+                                    key={index}
+                                    to={step.link}
+                                    className={`relative z-10 rounded-[14px] border border-[#D6D6D6] bg-white p-3 transition-all duration-300 hover:shadow-[0_18px_40px_rgba(15,23,42,0.08)] ${isRight ? "lg:translate-y-[80px]" : ""
+                                        }`}
+                                >
+                                    <div className="min-h-[170px] rounded-[10px] border border-[#DCDCDC] bg-[#FAFAFA] p-7 flex flex-col justify-between">
+                                        <div className="flex items-center justify-between">
+                                            <span className="text-black text-[18px] font-medium">
+                                                {step.no}
+                                            </span>
+
+                                            <div className="w-11 h-11 rounded-[8px] bg-white border border-[#E5E7EB] flex items-center justify-center text-[#111827]">
+                                                <Icon size={20} strokeWidth={1.8} />
+                                            </div>
+                                        </div>
+
+                                        <div className="mt-8">
+                                            <h3 className="text-black text-[21px] font-semibold leading-snug mb-3">
+                                                {step.title}
+                                            </h3>
+
+                                            <p className="text-[#4B5563] text-[14px] leading-relaxed max-w-[620px]">
+                                                {step.desc}
+                                            </p>
+                                        </div>
                                     </div>
-                                    {index !== steps.length - 1 && (
-                                        <div className="w-[2px] h-8 bg-blue-100 mt-1" />
-                                    )}
-                                </div>
-
-                                <div>
-                                    <p className="text-[15px] font-medium text-[#0F1B3D]">
-                                        {step}
-                                    </p>
-                                    <p className="text-[13px] text-[#6B7280] mt-1">
-                                        Simple explanation to help you understand this step clearly.
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
+                                </Link>
+                            );
+                        })}
                     </div>
-
-
                 </div>
-                {/* RIGHT SIDE */}
-                <div className="flex flex-col items-center justify-center h-full w-full">
-                    <img src="/images/fix-driver-monitor.webp" className="w-full h-full object-contain" alt="" />
-
-
-                </div>
-
-
-
-
             </div>
         </section>
     );

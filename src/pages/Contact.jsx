@@ -8,18 +8,18 @@ const Contact = () => {
   return (
     <div className="bg-[#F8FAFC] min-h-screen font-[Poppins]">
       <Helmet>
-        <title>Help Center | Mister PC Driver Technical Registry</title>
-        <meta name="description" content="Contact Mister PC Driver for technical documentation requests, hardware registry updates, or technical inquiries regarding system protocols." />
+        <title>Help Center | Drivexa Technical Registry</title>
+        <meta name="description" content="Contact Drivexa for technical documentation requests, hardware registry updates, or technical inquiries regarding system protocols." />
       </Helmet>
 
       {/* Simple Hero */}
       <section className="pt-32 pb-16 bg-[#071A3D] text-center">
         <div className="max-w-[1200px] mx-auto px-6">
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
-            Help <span className="text-blue-500">Center</span>
+            Documentation <span className="text-blue-500">Center</span>
           </h1>
           <p className="text-white/60 text-base max-w-xl mx-auto">
-            Have a question about hardware protocols or want to contribute to our technical documentation? Our team manages the global hardware registry.
+            Have a question about hardware protocols or want to contribute to our technical documentation? Our team manages the hardware resource registry.
           </p>
         </div>
       </section>
@@ -36,10 +36,10 @@ const Contact = () => {
                   <FaEnvelope size={16} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900 text-sm">Technical Inquiry</h4>
-                  <p className="text-slate-600 text-sm font-medium mt-1"> <a href="mailto:info@misterpcdriver.com" >
+                  <h4 className="font-bold text-slate-900 text-sm">Documentation Request</h4>
+                  <p className="text-slate-600 text-sm font-medium mt-1"> <a href="mailto:info@drivexa.co" >
 
-                    info@misterpcdriver.com
+                    info@drivexa.co
                   </a></p>
                 </div>
               </div>
@@ -50,7 +50,7 @@ const Contact = () => {
             {/* Form */}
             <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
               <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                <FaPaperPlane className="text-blue-600 size={18}" /> Submit Technical Inquiry
+                <FaPaperPlane className="text-blue-600 size={18}" /> Submit Documentation Request
               </h2>
 
               <form className="space-y-5">
@@ -65,15 +65,15 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="space-y-1.5">
-                  <label className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Technical Subject</label>
-                  <input type="text" placeholder="e.g. Documentation Request" className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm outline-none focus:border-blue-500 transition-colors" />
+                  <label className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Hardware Topic</label>
+                  <input type="text" placeholder="e.g. Printer Documentation" className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm outline-none focus:border-blue-500 transition-colors" />
                 </div>
                 <div className="space-y-1.5">
-                  <label className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Details</label>
-                  <textarea rows="4" placeholder="Provide technical details or documentation requests..." className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm outline-none focus:border-blue-500 transition-colors"></textarea>
+                  <label className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Request Details</label>
+                  <textarea rows="4" placeholder="Provide details about the documentation you need..." className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm outline-none focus:border-blue-500 transition-colors"></textarea>
                 </div>
                 <button className="w-full bg-blue-600 text-white py-4 rounded-xl font-bold text-sm hover:bg-blue-700 transition shadow-md active:scale-[0.98]">
-                  Submit Inquiry
+                  Submit Request
                 </button>
               </form>
             </div>

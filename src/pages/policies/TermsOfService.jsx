@@ -9,9 +9,9 @@ const TermsOfService = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24 font-poppins">
       <Helmet>
-        <title>Terms of Service - Mister PC Driver</title>
-        <meta name="description" content="Official Terms of Service for Mister PC Driver. Agreement to our legal terms and conditions." />
-        <link rel="canonical" href="https://www.misterpcdriver.com/terms-of-service" />
+        <title>Terms of Service - Drivexa</title>
+        <meta name="description" content="Official Terms of Service for Drivexa. Agreement to our legal terms and conditions." />
+        <link rel="canonical" href="https://www.drivexa.co/terms-of-service" />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-5xl">
@@ -24,21 +24,21 @@ const TermsOfService = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">AGREEMENT TO OUR LEGAL TERMS</h2>
 
             <p>
-              We operate the website <a href="https://www.misterpcdriver.com/" className="text-primary hover:text-secondary">https://www.misterpcdriver.com/</a> (the "<strong>Site</strong>"), as well as any other related
+              We operate the website <a href="https://www.drivexa.co/" className="text-primary hover:text-secondary">https://www.drivexa.co/</a> (the "<strong>Site</strong>"), as well as any other related
               products and services that refer or link to these legal terms (the "<strong>Legal Terms</strong>") (collectively,
               the "<strong>Services</strong>").
             </p>
             <p>
-              Mister PC Driver was founded on the principle that household repairs should be handled with
+              Drivexa was founded on the principle that household repairs should be handled with
               the same level of precision as industrial maintenance. We recognize that modern appliances
               are complex electronic systems that require specialized knowledge and calibrated tools for
               effective servicing.
             </p>
             <p>
-              You can contact us by email at <a href="mailto:info@misterpcdriver.com" className="text-primary">info@misterpcdriver.com</a></p>
+              You can contact us by email at <a href="mailto:info@drivexa.co" className="text-primary">info@drivexa.co</a></p>
             <p>
               These Legal Terms constitute a legally binding agreement made between you, whether
-              personally or on behalf of an entity ("<strong>you</strong>"), and Mister PC Driver, concerning your access to
+              personally or on behalf of an entity ("<strong>you</strong>"), and Drivexa, concerning your access to
               and use of the Services. You agree that by accessing the Services, you have read,
               understood, and agreed to be bound by all of these Legal Terms. <strong>IF YOU DO NOT AGREE
                 WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE
@@ -110,7 +110,7 @@ const TermsOfService = () => {
             </ul>
             <p>solely for your personal, non-commercial use or internal business purpose.</p>
             <p>Except as set out in this section or elsewhere in our Legal Terms, no part of the Services and no Content or Marks may be copied, reproduced, aggregated, republished, uploaded, posted, publicly displayed, encoded, translated, transmitted, distributed, sold, licensed, or otherwise exploited for any commercial purpose whatsoever, without our express prior written permission.</p>
-            <p>If you wish to make any use of the Services, Content, or Marks other than as set out in this section or elsewhere in our Legal Terms, please address your request to: <a href="mailto:info@misterpcdriver.com" className="text-primary">info@misterpcdriver.com</a>. If we ever grant you the permission to post, reproduce, or publicly display any part of our Services or Content, you must identify us as the owners or licensors of the Services, Content, or Marks and ensure that any copyright or proprietary notice appears or is visible on posting, reproducing, or displaying our Content.</p>
+            <p>If you wish to make any use of the Services, Content, or Marks other than as set out in this section or elsewhere in our Legal Terms, please address your request to: <a href="mailto:info@drivexa.co" className="text-primary">info@drivexa.co</a>. If we ever grant you the permission to post, reproduce, or publicly display any part of our Services or Content, you must identify us as the owners or licensors of the Services, Content, or Marks and ensure that any copyright or proprietary notice appears or is visible on posting, reproducing, or displaying our Content.</p>
             <p>We reserve all rights not expressly granted to you in and to the Services, Content, and Marks.</p>
             <p>Any breach of these Intellectual Property Rights will constitute a material breach of our Legal Terms and your right to use our Services will terminate immediately.</p>
 
@@ -200,7 +200,7 @@ const TermsOfService = () => {
 
           <section id="privacy">
             <h3 className="text-xl font-bold text-gray-900 border-b pb-2 mb-4 uppercase">8. PRIVACY POLICY</h3>
-            <p>We care about data privacy and security. Please review our Privacy Policy: <a href="https://www.misterpcdriver.com/privacy-policy" className="text-primary hover:underline">https://www.misterpcdriver.com/privacy-policy</a>. By using the Services, you agree to be bound by our Privacy Policy, which is incorporated into these Legal Terms. Please be advised the Services are hosted in the United States. If you access the Services from any other region of the world with laws or other requirements governing personal data collection, use, or disclosure that differ from applicable laws in the United States, then through your continued use of the Services, you are transferring your data to the United States, and you expressly consent to have your data transferred to and processed in the United States.</p>
+            <p>We care about data privacy and security. Please review our Privacy Policy: <a href="https://www.drivexa.co/privacy-policy" className="text-primary hover:underline">https://www.drivexa.co/privacy-policy</a>. By using the Services, you agree to be bound by our Privacy Policy, which is incorporated into these Legal Terms. Please be advised the Services are hosted in the United States. If you access the Services from any other region of the world with laws or other requirements governing personal data collection, use, or disclosure that differ from applicable laws in the United States, then through your continued use of the Services, you are transferring your data to the United States, and you expressly consent to have your data transferred to and processed in the United States.</p>
           </section>
 
           <section id="termination">
@@ -263,7 +263,7 @@ const TermsOfService = () => {
           <section id="contact">
             <h3 className="text-xl font-bold text-gray-900 border-b pb-2 mb-4 uppercase">20. CONTACT US</h3>
             <p>In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact us at:</p>
-            <p>Email: <a href="mailto:info@misterpcdriver.com" className="text-primary">info@misterpcdriver.com</a></p>
+            <p>Email: <a href="mailto:info@drivexa.co" className="text-primary">info@drivexa.co</a></p>
           </section>
         </div>
       </div>

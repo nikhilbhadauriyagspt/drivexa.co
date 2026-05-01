@@ -9,9 +9,9 @@ const Disclaimer = () => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>Disclaimer - Mister PC Driver</title>
-        <meta name="description" content="Disclaimer for Mister PC Driver." />
-        <link rel="canonical" href="https://www.misterpcdriver.com/disclaimer" />
+        <title>Disclaimer - Drivexa</title>
+        <meta name="description" content="Disclaimer for Drivexa." />
+        <link rel="canonical" href="https://www.drivexa.co/disclaimer" />
       </Helmet>
       <div className="container mx-auto px-4 max-w-4xl">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">Disclaimer</h1>
@@ -19,7 +19,7 @@ const Disclaimer = () => {
           <p>Last updated: Apr 2026</p>
 
           <h3>General Disclaimer</h3>
-          <p>The information provided by Mister PC Driver ("we," "us," or "our") on <a href="https://www.misterpcdriver.com">https://www.misterpcdriver.com</a> (the "Site") is for general informational purposes only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the Site.</p>
+          <p>The information provided by Drivexa ("we," "us," or "our") on <a href="https://www.drivexa.co">https://www.drivexa.co</a> (the "Site") is for general informational purposes only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the Site.</p>
 
           <h3>Professional Disclaimer</h3>
           <p>The Site cannot and does not contain legal or medical advice. The information is provided for general informational and educational purposes only and is not a substitute for professional advice. Accordingly, before taking any actions based upon such information, we encourage you to consult with the appropriate professionals.</p>

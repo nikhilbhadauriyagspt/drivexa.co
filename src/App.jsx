@@ -14,11 +14,9 @@ import Home from './pages/Home';
 // Lazy load other pages for code splitting
 const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
-const Blog = lazy(() => import('./pages/Blog'));
 const Contact = lazy(() => import('./pages/Contact'));
 const FAQPage = lazy(() => import('./pages/FAQ'));
 const ServiceDetails = lazy(() => import('./pages/ServiceDetails'));
-const BlogDetails = lazy(() => import('./pages/BlogDetails'));
 const GuideDetails = lazy(() => import('./pages/GuideDetails'));
 const Guides = lazy(() => import('./pages/Guides'));
 const PrivacyPolicy = lazy(() => import('./pages/policies/PrivacyPolicy'));
@@ -36,19 +34,19 @@ const PageLoader = () => (
 
 const AppContent = () => {
   const location = useLocation();
+  const isHomePage = location.pathname === '/';
   // No longer hiding header/footer for specific appliance pages as they are removed
   const hideHeaderFooter = false;
 
   return (
     <div className="App overflow-x-hidden">
-      {!hideHeaderFooter && <Header />}
+      {!hideHeaderFooter && !isHomePage && <Header />}
       <CookieConsent />
       <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/drivers" element={<Services />} />
-          <Route path="/blog" element={<Blog />} />
           <Route path="/faq" element={<FAQPage />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/contact" element={<Contact />} />
@@ -64,8 +62,7 @@ const AppContent = () => {
           {/* Dynamic route for all Guides */}
           <Route path="/guide/:slug" element={<GuideDetails />} />
 
-          {/* Catch-all for blogs */}
-          <Route path="/blog/:id" element={<BlogDetails />} />
+
         </Routes>
         {!hideHeaderFooter && <Footer />}
       </Suspense>

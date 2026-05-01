@@ -40,25 +40,27 @@ export default function DriverCategoryMarquee() {
     const marqueeItems = [...drivers, ...drivers];
 
     return (
-        <section className=" font-[Poppins] overflow-hidden">
-            <div className="max-w-[1800px] mx-auto ">
-                <div className="grid grid-cols-1 lg:grid-cols-[25%_75%] items-center">
-                    {/* Left Content */}
-                    <div className="p-7 lg:p-9 border-b lg:border-b-0 lg:border-r border-[#E6ECF8]">
+        <section className="bg-white py-10 md:py-12 px-4 font-[Poppins] overflow-hidden">
+            <div className="max-w-[1800px] mx-auto rounded-[14px] border border-[#D6D6D6] bg-white p-3">
+                <div className="grid grid-cols-1 lg:grid-cols-[25%_75%] rounded-[10px] border border-[#DCDCDC] bg-[#FAFAFA] overflow-hidden">
 
-                        <h2 className="text-[#07153A] text-[26px] md:text-[30px] font-semibold leading-tight">
+                    {/* Left Content */}
+                    <div className="p-7 lg:p-8 border-b lg:border-b-0 lg:border-r border-[#DCDCDC] flex flex-col justify-center">
+                        <h2 className="text-black text-[26px] md:text-[32px] font-normal leading-tight">
                             Browse Driver Topics
                         </h2>
 
-                        <p className="text-[#667085] text-[14px] leading-relaxed mt-3">
+                        <p className="text-[#4B5563] text-[14px] leading-relaxed mt-4">
                             Quick access to common driver and device guide categories.
                         </p>
                     </div>
 
                     {/* Right Marquee */}
-                    <div className="relative overflow-hidden py-8">
+                    <div className="relative overflow-hidden py-7">
+                        <div className="pointer-events-none absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-[#FAFAFA] to-transparent z-10" />
+                        <div className="pointer-events-none absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-[#FAFAFA] to-transparent z-10" />
 
-                        <div className="flex w-max animate-driverMarquee gap-4 px-4">
+                        <div className="flex w-max animate-driverMarquee gap-4 px-5">
                             {marqueeItems.map((item, index) => {
                                 const Icon = item.icon;
 
@@ -66,13 +68,13 @@ export default function DriverCategoryMarquee() {
                                     <Link
                                         key={index}
                                         to={item.slug ? `/guide/${item.slug}` : "/guides"}
-                                        className="w-[120px] flex flex-col items-center justify-center text-center group"
+                                        className="group w-[132px] h-[132px] rounded-[12px] border border-[#DCDCDC] bg-white flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-[0_14px_30px_rgba(15,23,42,0.08)]"
                                     >
-                                        <div className="w-16 h-16 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-sm group-hover:shadow-md">
-                                            <Icon size={24} strokeWidth={2} />
+                                        <div className="w-12 h-12 rounded-[8px] bg-[#FAFAFA] border border-[#E5E7EB] text-[#111827] flex items-center justify-center mb-4 group-hover:bg-black group-hover:text-white transition-all duration-300">
+                                            <Icon size={21} strokeWidth={1.8} />
                                         </div>
 
-                                        <p className="text-[#101828] text-[13px] font-medium group-hover:text-blue-600 transition-colors">
+                                        <p className="text-black text-[14px] font-semibold group-hover:text-[#111827] transition-colors">
                                             {item.title}
                                         </p>
                                     </Link>
