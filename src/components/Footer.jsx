@@ -96,13 +96,7 @@ export default function Footer() {
               © {currentYear} Drivexa. All information is for educational purposes.
             </p>
 
-            <Link
-              to="/guides"
-              className="inline-flex items-center gap-2 text-black text-[13px] font-semibold hover:text-blue-600 transition"
-            >
-              Browse Guides
-              <ArrowRight size={15} />
-            </Link>
+
           </div>
         </div>
       </div>
