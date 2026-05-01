@@ -15,12 +15,17 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Fix System Issues | WiFi, Audio, USB & Printer Solutions</title>
-        <meta name="description" content="Technical repository for hardware specifications, software-level architectural data, and system optimization documentation for the global technical community." />
+        <title>Drivexa | Simple Driver Information Guides</title>
+        <meta
+          name="description"
+          content="Drivexa provides simple educational guides about driver topics, device settings, and common hardware communication issues."
+        />
         <link rel="canonical" href="https://drivexa.co/" />
       </Helmet>
 
-      <h1 className="sr-only">Fix Hardware Issues with Step-by-Step Information Guides</h1>
+      <h1 className="sr-only">
+        Driver Information Guides for Common Device and Hardware Topics
+      </h1>
       <Hero />
       <DriverCategoryMarquee />
 
