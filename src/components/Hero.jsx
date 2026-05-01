@@ -24,9 +24,6 @@ export default function Hero() {
 
         {/* Hidden SEO content */}
         <div className="sr-only">
-          <h1>
-            Fix Driver Issues with Step-by-Step Installation Guides
-          </h1>
           <p>
             Solve WiFi, Audio, Printer, and USB problems easily with our
             verified technical documentation.

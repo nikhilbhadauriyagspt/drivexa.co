@@ -104,6 +104,7 @@ const FAQPage = () => {
           name="description"
           content="Find simple answers about drivers, device issues, and system-related topics."
         />
+        <link rel="canonical" href="https://drivexa.co/faq" />
       </Helmet>
 
       <div className="max-w-[1600px] mx-auto px-4">

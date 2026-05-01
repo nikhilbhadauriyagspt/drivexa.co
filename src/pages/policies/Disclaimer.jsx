@@ -11,7 +11,7 @@ const Disclaimer = () => {
       <Helmet>
         <title>Disclaimer - Drivexa</title>
         <meta name="description" content="Disclaimer for Drivexa." />
-        <link rel="canonical" href="https://www.drivexa.co/disclaimer" />
+        <link rel="canonical" href="https://drivexa.co/disclaimer" />
       </Helmet>
       <div className="container mx-auto px-4 max-w-4xl">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">Disclaimer</h1>

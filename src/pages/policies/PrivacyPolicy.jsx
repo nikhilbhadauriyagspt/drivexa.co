@@ -11,6 +11,7 @@ const PrivacyPolicy = () => {
       <Helmet>
         <title>Privacy Policy | Drivexa Official Standards</title>
         <meta name="description" content="Detailed Privacy Policy for Drivexa. Understand how we collect, use, and protect your technical data." />
+        <link rel="canonical" href="https://drivexa.co/privacy-policy" />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-5xl">
@@ -25,7 +26,7 @@ const PrivacyPolicy = () => {
               you use our services ("<strong>Services</strong>"), including when you:
             </p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Visit our website at <a href="https://www.drivexa.co/" className="text-primary hover:text-secondary">https://www.drivexa.co/</a> or any website of ours that links to this Privacy Notice</li>
+              <li>Visit our website at <a href="https://drivexa.co/" className="text-primary hover:text-secondary">https://drivexa.co/</a> or any website of ours that links to this Privacy Notice</li>
               <li>Use Drivexa. At Drivexa, we focus on technical accuracy and providing high-quality hardware documentation. Our platform is built on providing technical clarity and installation guides to help users understand their system drivers and hardware communication.</li>
               <li>Engage with us in other related ways, including any marketing or events</li>
             </ul>

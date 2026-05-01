@@ -28,13 +28,6 @@ export default function DriverCategoryMarquee() {
         { title: "USB", icon: Usb, slug: "fix-usb-driver-issues" },
         { title: "Scanner", icon: ScanLine, slug: "fix-scanner-driver-problems" },
         { title: "Chipset", icon: Cpu, slug: "update-chipset-drivers" },
-        { title: "Storage", icon: HardDrive, slug: "fix-device-not-detected" },
-        { title: "Touchpad", icon: Touchpad, slug: "fix-input-latency-drivers" },
-        { title: "Webcam", icon: Video, slug: "fix-webcam-driver-issues" },
-        { title: "BIOS", icon: ShieldCheck, slug: "guide-bios-firmware-updates" },
-        { title: "Search", icon: Search, slug: "" },
-        { title: "Security", icon: ShieldAlert, slug: "" },
-        { title: "Monitor", icon: Tv, slug: "fix-graphics-driver-issues" },
     ];
 
     const marqueeItems = [...drivers, ...drivers];
@@ -42,23 +35,23 @@ export default function DriverCategoryMarquee() {
     return (
         <section className="bg-white py-10 md:py-12 px-4 font-[Poppins] overflow-hidden">
             <div className="max-w-[1800px] mx-auto rounded-[14px] border border-[#D6D6D6] bg-white p-3">
-                <div className="grid grid-cols-1 lg:grid-cols-[25%_75%] rounded-[10px] border border-[#DCDCDC] bg-[#FAFAFA] overflow-hidden">
+                <div className="flex flex-col lg:flex-row rounded-[10px] border border-[#DCDCDC] bg-[#FAFAFA] overflow-hidden">
 
                     {/* Left Content */}
-                    <div className="p-7 lg:p-8 border-b lg:border-b-0 lg:border-r border-[#DCDCDC] flex flex-col justify-center">
+                    <div className="p-7 lg:p-8 border-b lg:border-b-0 lg:border-r border-[#DCDCDC] lg:w-1/4">
                         <h2 className="text-black text-[26px] md:text-[32px] font-normal leading-tight">
-                            Browse Driver Topics
+                            Browse System Topics
                         </h2>
 
                         <p className="text-[#4B5563] text-[14px] leading-relaxed mt-4">
-                            Quick access to common driver and device guide categories.
+                            Quick access to common technical and device guide categories.
                         </p>
                     </div>
 
                     {/* Right Marquee */}
-                    <div className="relative overflow-hidden py-7">
-                        <div className="pointer-events-none absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-[#FAFAFA] to-transparent z-10" />
-                        <div className="pointer-events-none absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-[#FAFAFA] to-transparent z-10" />
+                    <div className="relative overflow-hidden py-7 lg:w-3/4">
+                        <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#FAFAFA] to-transparent z-10" />
+                        <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#FAFAFA] to-transparent z-10" />
 
                         <div className="flex w-max animate-driverMarquee gap-4 px-5">
                             {marqueeItems.map((item, index) => {
@@ -67,14 +60,14 @@ export default function DriverCategoryMarquee() {
                                 return (
                                     <Link
                                         key={index}
-                                        to={item.slug ? `/guide/${item.slug}` : "/guides"}
-                                        className="group w-[132px] h-[132px] rounded-[12px] border border-[#DCDCDC] bg-white flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-[0_14px_30px_rgba(15,23,42,0.08)]"
+                                        to={`/guide/${item.slug}`}
+                                        className="group w-28 h-28 rounded-xl border border-[#DCDCDC] bg-white flex flex-col items-center justify-center text-center transition-all hover:shadow-lg"
                                     >
-                                        <div className="w-12 h-12 rounded-[8px] bg-[#FAFAFA] border border-[#E5E7EB] text-[#111827] flex items-center justify-center mb-4 group-hover:bg-black group-hover:text-white transition-all duration-300">
-                                            <Icon size={21} strokeWidth={1.8} />
+                                        <div className="w-10 h-10 rounded-lg bg-[#FAFAFA] border border-[#E5E7EB] text-[#111827] flex items-center justify-center mb-3 group-hover:bg-black group-hover:text-white transition-all">
+                                            <Icon size={18} strokeWidth={1.8} />
                                         </div>
 
-                                        <p className="text-black text-[14px] font-semibold group-hover:text-[#111827] transition-colors">
+                                        <p className="text-black text-[13px] font-semibold">
                                             {item.title}
                                         </p>
                                     </Link>

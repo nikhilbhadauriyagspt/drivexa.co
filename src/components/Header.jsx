@@ -30,7 +30,7 @@ import {
   ShieldAlert,
   Zap
 } from "lucide-react";
-import { servicesData } from "../data/services";
+import { topicsData } from "../data/topics";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,10 +48,10 @@ const Header = () => {
       return;
     }
 
-    const results = servicesData.filter(
-      (service) =>
-        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.shortDesc.toLowerCase().includes(searchTerm.toLowerCase())
+    const results = topicsData.filter(
+      (topic) =>
+        topic.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        topic.shortDesc.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
     setSearchResults(results);
@@ -105,18 +105,12 @@ const Header = () => {
     { title: "Driver Not Installed", icon: <Download size={14} />, slug: "fix-driver-not-installed" },
     { title: "Outdated Drivers", icon: <RefreshCcw size={14} />, slug: "fix-driver-update-failed" },
     { title: "Device Not Detected", icon: <Monitor size={14} />, slug: "fix-device-not-detected" },
-    { title: "Driver Update Failed", icon: <XCircle size={14} />, slug: "fix-driver-update-failed" },
     { title: "Printer Driver Issues", icon: <Printer size={14} />, slug: "fix-printer-driver-issues" },
     { title: "Audio Not Working", icon: <Volume2 size={14} />, slug: "fix-audio-driver-problems" },
     { title: "Network / WiFi Issues", icon: <Wifi size={14} />, slug: "fix-wifi-network-issues" },
     { title: "Bluetooth Problems", icon: <Bluetooth size={14} />, slug: "fix-bluetooth-driver-problems" },
     { title: "USB Not Recognized", icon: <Usb size={14} />, slug: "fix-usb-driver-issues" },
     { title: "Graphics / Display Issues", icon: <MonitorSmartphone size={14} />, slug: "fix-graphics-driver-issues" },
-    { title: "Webcam Offline", icon: <Video size={14} />, slug: "fix-webcam-driver-issues" },
-    { title: "Scanner Errors", icon: <Scan size={14} />, slug: "fix-scanner-driver-problems" },
-    { title: "Chipset Logic", icon: <Cpu size={14} />, slug: "update-chipset-drivers" },
-    { title: "BIOS / Firmware", icon: <ShieldAlert size={14} />, slug: "guide-bios-firmware-updates" },
-    { title: "Input Latency", icon: <Zap size={14} />, slug: "fix-input-latency-drivers" },
   ];
 
   const navLinks = [
@@ -166,7 +160,7 @@ const Header = () => {
                   : "text-gray-500 hover:bg-gray-100 hover:text-gray-900"
                   }`}
               >
-                Topics
+                Information Registry
                 <FaChevronDown
                   size={8}
                   className={`transition-transform ${activeDropdown === "topics" ? "rotate-180" : ""
@@ -212,7 +206,7 @@ const Header = () => {
                   : "text-gray-500 hover:bg-gray-100 hover:text-gray-900"
                   }`}
               >
-                Fix Issues
+                Technical Guides
                 <FaChevronDown
                   size={8}
                   className={`transition-transform ${activeDropdown === "issues" ? "rotate-180" : ""

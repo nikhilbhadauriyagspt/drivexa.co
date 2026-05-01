@@ -12,7 +12,7 @@ const CookiePolicy = () => {
       <Helmet>
         <title>Cookie Policy - Drivexa</title>
         <meta name="description" content="Cookie Policy for Drivexa. Understand how we use cookies and tracking technologies." />
-        <link rel="canonical" href="https://www.drivexa.co/cookie-policy" />
+        <link rel="canonical" href="https://drivexa.co/cookie-policy" />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-5xl">
@@ -24,7 +24,7 @@ const CookiePolicy = () => {
             <p>
               This Cookie Policy explains how Drivexa (“<strong>Company</strong>,” “<strong>we</strong>,” “<strong>us</strong>,” or “<strong>our</strong>”) uses
               cookies and similar tracking technologies when you visit our website
-              <a href="https://www.drivexa.co/" className="text-primary hover:text-secondary"> https://www.drivexa.co/</a> (the “<strong>Website</strong>”). This policy should be read together with our
+              <a href="https://drivexa.co/" className="text-primary hover:text-secondary"> https://drivexa.co/</a> (the “<strong>Website</strong>”). This policy should be read together with our
               <a href="/privacy-policy" className="text-primary hover:underline font-bold"> PRIVACY POLICY</a> and <a href="/terms-of-service" className="text-primary hover:underline font-bold">TERMS OF SERVICE</a>.
             </p>
           </section>

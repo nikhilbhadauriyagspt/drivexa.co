@@ -19,6 +19,7 @@ const About = () => {
           name="description"
           content="Drivexa provides simple educational guides about common driver issues, device settings, and troubleshooting information."
         />
+        <link rel="canonical" href="https://drivexa.co/about" />
       </Helmet>
 
       {/* Hero */}

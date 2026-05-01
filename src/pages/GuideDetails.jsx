@@ -43,6 +43,7 @@ const GuideDetails = () => {
       <Helmet>
         <title>{guide.title} | Drivexa Guide</title>
         <meta name="description" content={guide.desc} />
+        <link rel="canonical" href={`https://drivexa.co/guide/${slug}`} />
       </Helmet>
 
       <div className="max-w-[1600px] mx-auto px-4">

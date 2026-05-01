@@ -13,6 +13,7 @@ const Guides = () => {
           name="description"
           content="Browse simple educational driver guides about printer, audio, WiFi, graphics, USB, Bluetooth, and common device-related topics."
         />
+        <link rel="canonical" href="https://drivexa.co/guides" />
       </Helmet>
 
       <div className="max-w-[1600px] mx-auto px-4">

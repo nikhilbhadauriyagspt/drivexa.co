@@ -11,7 +11,7 @@ const RefundPolicy = () => {
       <Helmet>
         <title>Return Policy - Drivexa</title>
         <meta name="description" content="Official Return Policy for Drivexa. Details on returns, process, and refunds." />
-        <link rel="canonical" href="https://www.drivexa.co/refund-policy" />
+        <link rel="canonical" href="https://drivexa.co/refund-policy" />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-4xl">

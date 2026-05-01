@@ -6,8 +6,8 @@ export default function DriverProcessSection() {
     const steps = [
         {
             no: "01",
-            title: "Identify the Driver Issue",
-            desc: "Check whether the problem is related to printer, audio, WiFi, USB, graphics, Bluetooth, or another device driver.",
+            title: "Identify the Hardware Issue",
+            desc: "Check whether the problem is related to printer, audio, WiFi, USB, graphics, Bluetooth, or another device component.",
             icon: Search,
             link: "/guides",
         },
@@ -35,17 +35,17 @@ export default function DriverProcessSection() {
     ];
 
     return (
-        <section className="bg-white py-16 md:py-20 px-4 font-[Poppins] overflow-hidden">
+        <section className="bg-white py-16 md:py-8 px-4 font-[Poppins] overflow-hidden border-b border-[#D6D6D6] md:pb-32">
             <div className="max-w-[1800px] mx-auto">
                 {/* Top Heading */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-14">
                     <h2 className="text-black text-[34px] md:text-[44px] lg:text-[50px] font-normal leading-[1.02] max-w-5xl">
-                        Simple Steps to Understand Driver Problems
+                        Simple Steps to Understand Technical Problems
                     </h2>
 
                     <p className="text-[#334155] text-[14px] leading-relaxed max-w-[620px] lg:ml-auto lg:text-right pt-3">
                         Our guides are made for learning only. They help you understand
-                        common driver issues clearly without offering downloads or technical
+                        common system issues clearly without offering downloads or technical
                         support services.
                     </p>
                 </div>

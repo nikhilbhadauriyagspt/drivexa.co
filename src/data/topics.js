@@ -5,7 +5,7 @@ import {
   FaCode, FaShieldAlt, FaTv 
 } from 'react-icons/fa';
 
-export const servicesData = [
+export const topicsData = [
   // ESSENTIAL DRIVERS
   {
     id: 1,

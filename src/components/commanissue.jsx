@@ -20,21 +20,21 @@ import { Link } from "react-router-dom";
 
 export default function CommonProblems() {
   const issues = [
-    ["Driver Not Installed", "Required driver file missing.", "Fresh OS setup or new device added.", <Download />, "fix-driver-not-installed"],
-    ["Outdated Drivers", "Old driver can create errors.", "System update or older software version.", <RefreshCcw />, "fix-driver-update-failed"],
-    ["Device Not Detected", "Device not visible in system.", "Loose connection or driver mismatch.", <Monitor />, "fix-device-not-detected"],
-    ["Driver Update Failed", "Update may stop midway.", "Low storage or version conflict.", <XCircle />, "fix-driver-update-failed"],
-    ["Printer Driver Issues", "Printer may not respond.", "Queue, connection, or driver setting.", <Printer />, "fix-printer-driver-issues"],
-    ["Audio Not Working", "Sound output may stop.", "Muted output or audio driver issue.", <Volume2 />, "fix-audio-driver-problems"],
+    ["Not Installed", "Required system file missing.", "Fresh OS setup or new device added.", <Download />, "fix-driver-not-installed"],
+    ["Outdated Software", "Old files can create errors.", "System update or older software version.", <RefreshCcw />, "fix-driver-update-failed"],
+    ["Device Not Detected", "Hardware not visible in system.", "Loose connection or setup mismatch.", <Monitor />, "fix-device-not-detected"],
+    ["Update Failed", "Process may stop midway.", "Low storage or version conflict.", <XCircle />, "fix-driver-update-failed"],
+    ["Printer Connectivity", "Printer may not respond.", "Queue, connection, or software setting.", <Printer />, "fix-printer-driver-issues"],
+    ["Audio Not Working", "Sound output may stop.", "Muted output or audio software issue.", <Volume2 />, "fix-audio-driver-problems"],
     ["Network / WiFi Issues", "Wi-Fi or LAN may fail.", "Adapter setting or router conflict.", <Wifi />, "fix-wifi-network-issues"],
     ["Bluetooth Problems", "Bluetooth may not pair.", "Disabled service or pairing conflict.", <Bluetooth />, "fix-bluetooth-driver-problems"],
     ["USB Not Recognized", "USB device may not appear.", "Port, cable, or controller issue.", <Usb />, "fix-usb-driver-issues"],
     ["Graphics / Display Issues", "Screen may flicker or lag.", "Resolution or display adapter conflict.", <MonitorSmartphone />, "fix-graphics-driver-issues"],
-    ["Webcam Offline", "Camera may show black screen.", "Privacy permission or webcam driver.", <Video />, "fix-webcam-driver-issues"],
-    ["Scanner Errors", "Scanner may fail to respond.", "App setting, connection, or driver mismatch.", <Scan />, "fix-scanner-driver-problems"],
-    ["Chipset Logic", "Components may not sync.", "Missing or incompatible chipset driver.", <Cpu />, "update-chipset-drivers"],
+    ["Webcam Offline", "Camera may show black screen.", "Privacy permission or camera software.", <Video />, "fix-webcam-driver-issues"],
+    ["Scanner Errors", "Scanner may fail to respond.", "App setting, connection, or software mismatch.", <Scan />, "fix-scanner-driver-problems"],
+    ["Chipset Logic", "Components may not sync.", "Missing or incompatible system files.", <Cpu />, "update-chipset-drivers"],
     ["BIOS / Firmware", "Startup issues may appear.", "Firmware mismatch or older BIOS.", <ShieldAlert />, "guide-bios-firmware-updates"],
-    ["Input Latency", "Keyboard or touchpad may lag.", "Input driver or background load.", <Zap />, "fix-input-latency-drivers"],
+    ["Input Latency", "Keyboard or touchpad may lag.", "Input software or background load.", <Zap />, "fix-input-latency-drivers"],
   ];
 
   return (
@@ -44,11 +44,11 @@ export default function CommonProblems() {
         {/* Heading */}
         <div className="text-center mb-10 md:mb-12">
           <h2 className="text-black text-[32px] md:text-[44px] font-normal leading-[1.05] max-w-[850px] mx-auto">
-            Explore Common Driver Issues
+            Explore Common System Issues
           </h2>
 
           <p className="max-w-[640px] mx-auto mt-6 text-[#334155] text-[14px] leading-relaxed">
-            Clean and easy guide-based information about common driver problems,
+            Clean and easy guide-based information about common hardware problems,
             why they may appear, and what users should understand first.
           </p>
         </div>

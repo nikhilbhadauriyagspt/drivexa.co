@@ -2,9 +2,9 @@ import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { BookingProvider } from './context/BookingContext';
+import { RequestProvider } from './context/RequestContext';
 import { SettingsProvider } from './context/SettingsContext';
-import QuickSupportFAB from './components/QuickSupportFAB';
+import RequestInfoFAB from './components/RequestInfoFAB';
 import CookieConsent from './components/CookieConsent';
 import ScrollToTop from './components/ScrollToTop';
 import './App.css';
@@ -13,10 +13,10 @@ import Home from './pages/Home';
 
 // Lazy load other pages for code splitting
 const About = lazy(() => import('./pages/About'));
-const Services = lazy(() => import('./pages/Services'));
+const Topics = lazy(() => import('./pages/Topics'));
 const Contact = lazy(() => import('./pages/Contact'));
 const FAQPage = lazy(() => import('./pages/FAQ'));
-const ServiceDetails = lazy(() => import('./pages/ServiceDetails'));
+const TopicDetails = lazy(() => import('./pages/TopicDetails'));
 const GuideDetails = lazy(() => import('./pages/GuideDetails'));
 const Guides = lazy(() => import('./pages/Guides'));
 const PrivacyPolicy = lazy(() => import('./pages/policies/PrivacyPolicy'));
@@ -46,7 +46,7 @@ const AppContent = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/drivers" element={<Services />} />
+          <Route path="/drivers" element={<Topics />} />
           <Route path="/faq" element={<FAQPage />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/contact" element={<Contact />} />
@@ -57,7 +57,7 @@ const AppContent = () => {
           <Route path="/disclaimer" element={<Disclaimer />} />
 
           {/* Dynamic route for all Drivers */}
-          <Route path="/driver/:slug" element={<ServiceDetails />} />
+          <Route path="/driver/:slug" element={<TopicDetails />} />
 
           {/* Dynamic route for all Guides */}
           <Route path="/guide/:slug" element={<GuideDetails />} />
@@ -73,12 +73,12 @@ const AppContent = () => {
 function App() {
   return (
     <SettingsProvider>
-      <BookingProvider>
+      <RequestProvider>
         <Router>
           <ScrollToTop />
           <AppContent />
         </Router>
-      </BookingProvider>
+      </RequestProvider>
     </SettingsProvider>
   );
 }

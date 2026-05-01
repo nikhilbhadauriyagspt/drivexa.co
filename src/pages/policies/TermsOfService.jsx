@@ -11,7 +11,7 @@ const TermsOfService = () => {
       <Helmet>
         <title>Terms of Service - Drivexa</title>
         <meta name="description" content="Official Terms of Service for Drivexa. Agreement to our legal terms and conditions." />
-        <link rel="canonical" href="https://www.drivexa.co/terms-of-service" />
+        <link rel="canonical" href="https://drivexa.co/terms-of-service" />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-5xl">
@@ -24,7 +24,7 @@ const TermsOfService = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">AGREEMENT TO OUR LEGAL TERMS</h2>
 
             <p>
-              We operate the website <a href="https://www.drivexa.co/" className="text-primary hover:text-secondary">https://www.drivexa.co/</a> (the "<strong>Site</strong>"), as well as any other related
+              We operate the website <a href="https://drivexa.co/" className="text-primary hover:text-secondary">https://drivexa.co/</a> (the "<strong>Site</strong>"), as well as any other related
               products and services that refer or link to these legal terms (the "<strong>Legal Terms</strong>") (collectively,
               the "<strong>Services</strong>").
             </p>
@@ -200,7 +200,7 @@ const TermsOfService = () => {
 
           <section id="privacy">
             <h3 className="text-xl font-bold text-gray-900 border-b pb-2 mb-4 uppercase">8. PRIVACY POLICY</h3>
-            <p>We care about data privacy and security. Please review our Privacy Policy: <a href="https://www.drivexa.co/privacy-policy" className="text-primary hover:underline">https://www.drivexa.co/privacy-policy</a>. By using the Services, you agree to be bound by our Privacy Policy, which is incorporated into these Legal Terms. Please be advised the Services are hosted in the United States. If you access the Services from any other region of the world with laws or other requirements governing personal data collection, use, or disclosure that differ from applicable laws in the United States, then through your continued use of the Services, you are transferring your data to the United States, and you expressly consent to have your data transferred to and processed in the United States.</p>
+            <p>We care about data privacy and security. Please review our Privacy Policy: <a href="https://drivexa.co/privacy-policy" className="text-primary hover:underline">https://drivexa.co/privacy-policy</a>. By using the Services, you agree to be bound by our Privacy Policy, which is incorporated into these Legal Terms. Please be advised the Services are hosted in the United States. If you access the Services from any other region of the world with laws or other requirements governing personal data collection, use, or disclosure that differ from applicable laws in the United States, then through your continued use of the Services, you are transferring your data to the United States, and you expressly consent to have your data transferred to and processed in the United States.</p>
           </section>
 
           <section id="termination">

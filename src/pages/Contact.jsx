@@ -8,8 +8,9 @@ const Contact = () => {
   return (
     <div className="bg-[#F8FAFC] min-h-screen font-[Poppins]">
       <Helmet>
-        <title>Help Center | Drivexa Technical Registry</title>
+        <title>Technical Registry | Drivexa Documentation Center</title>
         <meta name="description" content="Contact Drivexa for technical documentation requests, hardware registry updates, or technical inquiries regarding system protocols." />
+        <link rel="canonical" href="https://drivexa.co/contact" />
       </Helmet>
 
       {/* Simple Hero */}
